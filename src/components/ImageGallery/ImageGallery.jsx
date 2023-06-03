@@ -17,11 +17,13 @@ export function ImageGallery({ search }) {
   useEffect(() => {
     if (!search) return;
     getImagesFirst();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
 
   useEffect(() => {
     if (page === 1) return;
     getImages();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   const getImages = async () => {
