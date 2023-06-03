@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { ImageGalleryItem } from 'components/ImageGalleryItem/ImageGalleryItem';
 import { List } from './ImageGallery.styled';
 import { useEffect, useState } from 'react';
@@ -17,13 +18,11 @@ export function ImageGallery({ search }) {
   useEffect(() => {
     if (!search) return;
     getImagesFirst();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
 
   useEffect(() => {
     if (page === 1) return;
     getImages();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   const getImages = async () => {
